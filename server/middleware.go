@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/duo-labs/webauthn.io/models"
-	"github.com/duo-labs/webauthn.io/session"
+	"github.com/Unotechsoftware/webauthn.io/models"
+	"github.com/Unotechsoftware/webauthn.io/session"
 )
 
 // LoginRequired sets a context variable with the user loaded from the user ID

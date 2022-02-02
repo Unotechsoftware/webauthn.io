@@ -8,9 +8,9 @@ import (
 
 	"log"
 
-	"github.com/duo-labs/webauthn.io/config"
-	"github.com/duo-labs/webauthn.io/session"
-	"github.com/duo-labs/webauthn/webauthn"
+	"github.com/Unotechsoftware/webauthn.io/config"
+	"github.com/Unotechsoftware/webauthn.io/session"
+	"github.com/Unotechsoftware/webauthn/webauthn"
 	"github.com/gorilla/mux"
 )
 

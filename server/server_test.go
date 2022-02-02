@@ -3,8 +3,8 @@ package server
 import (
 	"testing"
 
-	"github.com/duo-labs/webauthn.io/config"
-	"github.com/duo-labs/webauthn.io/models"
+	"github.com/Unotechsoftware/webauthn.io/config"
+	"github.com/Unotechsoftware/webauthn.io/models"
 	"github.com/stretchr/testify/suite"
 )
 
