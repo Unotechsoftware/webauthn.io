@@ -4,7 +4,6 @@ go 1.17
 
 require (
 	github.com/Unotechsoftware/webauthn v0.0.0-uno-0
-	github.com/duo-labs/webauthn.io v0.0.0-20200929144140-c031a3e0f95d
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/gorilla/mux v1.7.3
 	github.com/gorilla/sessions v1.2.0
@@ -30,7 +29,6 @@ require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
-	github.com/duo-labs/webauthn v0.0.0-20220122034320-81aea484c951 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/fatih/color v1.7.0 // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
