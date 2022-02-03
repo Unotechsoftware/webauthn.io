@@ -2,7 +2,7 @@ package models
 
 import (
 	"testing"
-
+	"github.com/mattn/go-sqlite3"
 	"github.com/Unotechsoftware/webauthn.io/config"
 	"github.com/stretchr/testify/suite"
 )

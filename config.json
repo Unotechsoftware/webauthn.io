@@ -2,6 +2,6 @@
     "db_name": "sqlite3",
     "db_path": "webauthn.db",
     "host_address": "127.0.0.1",
-    "host_port": "9005",
+    "host_port": "9006",
     "relying_party": "localhost"
 }

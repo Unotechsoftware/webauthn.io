@@ -60,7 +60,7 @@ function setUser() {
 }
 
 function checkUserExists() {
-    $.get('/user/' + state.user.name + '/exists', {}, null, 'json')
+    $.get('https://c2e0-13-127-80-114.ngrok.io/user/' + state.user.name + '/exists', {}, null, 'json')
         .done(function (response) {
             return true;
         }).catch(function () {
@@ -69,7 +69,7 @@ function checkUserExists() {
 }
 
 function getCredentials() {
-    $.get('/credential/' + state.user.name, {}, null, 'json')
+    $.get('https://c2e0-13-127-80-114.ngrok.io/credential/' + state.user.name, {}, null, 'json')
         .done(function (response) {
             console.log(response)
         });
@@ -92,7 +92,7 @@ function makeCredential() {
     var resident_key_requirement = $('#select-residency').find(':selected').val();
     var txAuthSimple_extension = $('#extension-input').val();
 
-    $.get('/makeCredential/' + state.user.name, {
+    $.get('https://c2e0-13-127-80-114.ngrok.io/makeCredential/' + state.user.name, {
             attType: attestation_type,
             authType: authenticator_attachment,
             userVerification: user_verification,
@@ -130,7 +130,7 @@ function registerNewCredential(newCredential) {
     let rawId = new Uint8Array(newCredential.rawId);
 
     $.ajax({
-        url: '/makeCredential',
+        url: 'https://c2e0-13-127-80-114.ngrok.io/makeCredential',
         type: 'POST',
         data: JSON.stringify({
             id: newCredential.id,
@@ -165,14 +165,14 @@ function getAssertion() {
         return;
     }
     setUser();
-    $.get('/user/' + state.user.name + '/exists', {}, null, 'json').done(function (response) {
+    $.get('https://c2e0-13-127-80-114.ngrok.io/user/' + state.user.name + '/exists', {}, null, 'json').done(function (response) {
             console.log(response);
         }).then(function () {
             
             var user_verification = $('#select-verification').find(':selected').val();            
             var txAuthSimple_extension = $('#extension-input').val();
 
-            $.get('/assertion/' + state.user.name, {
+            $.get('https://c2e0-13-127-80-114.ngrok.io/assertion/' + state.user.name, {
                 userVer: user_verification,
                 txAuthExtension: txAuthSimple_extension
             }, null, 'json')
@@ -213,7 +213,7 @@ function verifyAssertion(assertedCredential) {
     let sig = new Uint8Array(assertedCredential.response.signature);
     let userHandle = new Uint8Array(assertedCredential.response.userHandle);
     $.ajax({
-        url: '/assertion',
+        url: 'https://c2e0-13-127-80-114.ngrok.io/assertion',
         type: 'POST',
         data: JSON.stringify({
             id: assertedCredential.id,

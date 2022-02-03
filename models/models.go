@@ -11,10 +11,9 @@ import (
 
 	"github.com/Unotechsoftware/webauthn.io/config"
 	log "github.com/Unotechsoftware/webauthn.io/logger"
-
+        _ "github.com/mattn/go-sqlite3"
 	_ "github.com/go-sql-driver/mysql" // Blank import needed to import mysql
 	"github.com/jinzhu/gorm"
-	_ "github.com/mattn/go-sqlite3" // Blank import needed to import sqlite3
 )
 
 var db *gorm.DB
